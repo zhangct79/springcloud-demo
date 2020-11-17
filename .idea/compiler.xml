@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="hystrix" />
+        <module name="gateway" />
+        <module name="eureka-server" />
+        <module name="test" />
+        <module name="serviceC" />
+        <module name="serviceB" />
+        <module name="serviceA" />
+        <module name="dashboard" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dashboard" target="1.8" />
+      <module name="eureka-server" target="1.8" />
+      <module name="gateway" target="1.8" />
+      <module name="hystrix" target="1.8" />
+      <module name="serviceA" target="1.8" />
+      <module name="serviceB" target="1.8" />
+      <module name="serviceC" target="1.8" />
+      <module name="springcloud-demo" target="1.5" />
+      <module name="test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="dashboard" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="hystrix" options="-parameters" />
+      <module name="serviceA" options="-parameters" />
+      <module name="serviceB" options="-parameters" />
+      <module name="serviceC" options="-parameters" />
+      <module name="test" options="-parameters" />
+    </option>
+  </component>
+</project>
