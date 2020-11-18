@@ -7,3 +7,17 @@ management:
     web:
       exposure:
         include: '*'
+
+eureka:
+  #  instance:
+  #    #续约发送间隔默认30秒，心跳间隔
+  #    lease-renewal-interval-in-seconds: 5
+  #    # 续约到期时间（默认90秒）
+  #    lease-expiration-duration-in-seconds: 15
+  client:
+    #    #表示eureka client间隔多久去拉取服务注册信息，默认为30秒，对于api-gateway，如果要迅速获取服务注册状态，可以缩小该值，比如5秒
+    #    registry-fetch-interval-seconds: 5
+    #    healthcheck:
+    #      enabled: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
