@@ -7,13 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hystrix" />
-        <module name="gateway" />
-        <module name="eureka-server" />
         <module name="test" />
-        <module name="serviceC" />
-        <module name="serviceB" />
+        <module name="serviceB-api" />
         <module name="serviceA" />
+        <module name="serviceC" />
+        <module name="serviceB-server" />
+        <module name="eureka-server" />
+        <module name="gateway" />
         <module name="dashboard" />
+        <module name="serviceB-common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,7 +24,11 @@
       <module name="gateway" target="1.8" />
       <module name="hystrix" target="1.8" />
       <module name="serviceA" target="1.8" />
-      <module name="serviceB" target="1.8" />
+      <module name="serviceB" target="1.5" />
+      <module name="serviceB (1) (com.example)" target="1.8" />
+      <module name="serviceB-api" target="1.8" />
+      <module name="serviceB-common" target="1.5" />
+      <module name="serviceB-server" target="1.8" />
       <module name="serviceC" target="1.8" />
       <module name="springcloud-demo" target="1.5" />
       <module name="test" target="1.8" />
@@ -35,7 +41,9 @@
       <module name="gateway" options="-parameters" />
       <module name="hystrix" options="-parameters" />
       <module name="serviceA" options="-parameters" />
-      <module name="serviceB" options="-parameters" />
+      <module name="serviceB (1) (com.example)" options="-parameters" />
+      <module name="serviceB-api" options="-parameters" />
+      <module name="serviceB-server" options="-parameters" />
       <module name="serviceC" options="-parameters" />
       <module name="test" options="-parameters" />
     </option>
