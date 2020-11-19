@@ -13,7 +13,8 @@ public class HelloController {
     String applicationName;
 
     @RequestMapping("hello")
-    public String hello() {
+    public String hello() throws InterruptedException {
+        Thread.sleep(2000);
         return applicationName+":"+port;
     }
 }

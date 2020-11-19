@@ -1,11 +1,57 @@
 server:
   port: 8000
 
+serviceA:
+  # 服务实例列表
+  listOfServers: http://localhost:7000,http://localhost:7001,http://localhost:7002
+  # 这个负载均衡器不做重试
+  MaxAutoRetriesNextServer: 0
+  MaxAutoRetries: 0
+  ribbon:
+    # 负载策略
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
+    # 设置它的服务实例信息来自配置文件, 如果不设置NIWSServerListClassName就会去euereka里面找
+    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+
+serviceC:
+  # 服务实例列表
+  listOfServers: http://localhost:9000,http://localhost:9001
+  # 这个负载均衡器不做重试
+  MaxAutoRetriesNextServer: 0
+  MaxAutoRetries: 0
+  ribbon:
+    # 负载策略
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+    # 设置它的服务实例信息来自配置文件, 如果不设置NIWSServerListClassName就会去euereka里面找
+    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
+
 spring:
   application:
     name: gateway
   cloud:
     gateway:
+      default-filters:
+        - name: Hystrix
+          args:
+            name: globalcmd
+            fallbackUri: forward:/fallback
+        - name: Retry
+          args:
+            retries: 3
+            statuses:
+              - BAD_GATEWAY
+        - name: Hystrix
+          args:
+            name: retrycmd
+            fallbackUri: forward:/retryFallback
       routes:
         - id: serviceA
           uri: lb://serviceA
