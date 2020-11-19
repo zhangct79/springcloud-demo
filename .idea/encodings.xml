@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/dashboard/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/serviceA/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/serviceB/serviceB-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/serviceB/serviceB-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/serviceB/serviceB-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/serviceC/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test/dashboard/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test/hystrix/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test/ribbon/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test01/src/main/java" charset="UTF-8" />
   </component>
 </project>

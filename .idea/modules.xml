@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/dashboard/dashboard.iml" filepath="$PROJECT_DIR$/dashboard/dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test/dashboard/dashboard.iml" filepath="$PROJECT_DIR$/test/dashboard/dashboard.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test/hystrix/hystrix.iml" filepath="$PROJECT_DIR$/test/hystrix/hystrix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test/ribbon/ribbon.iml" filepath="$PROJECT_DIR$/test/ribbon/ribbon.iml" />
       <module fileurl="file://$PROJECT_DIR$/serviceA/serviceA.iml" filepath="$PROJECT_DIR$/serviceA/serviceA.iml" />
       <module fileurl="file://$PROJECT_DIR$/serviceB/serviceB.iml" filepath="$PROJECT_DIR$/serviceB/serviceB.iml" />
       <module fileurl="file://$PROJECT_DIR$/serviceB/serviceB-api/serviceB-api.iml" filepath="$PROJECT_DIR$/serviceB/serviceB-api/serviceB-api.iml" />

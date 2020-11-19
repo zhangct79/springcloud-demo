@@ -7,15 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hystrix" />
-        <module name="test" />
         <module name="serviceB-api" />
+        <module name="ribbon" />
         <module name="serviceA" />
         <module name="serviceC" />
         <module name="serviceB-server" />
         <module name="eureka-server" />
         <module name="gateway" />
-        <module name="dashboard" />
         <module name="serviceB-common" />
+        <module name="dashboard" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -23,6 +23,7 @@
       <module name="eureka-server" target="1.8" />
       <module name="gateway" target="1.8" />
       <module name="hystrix" target="1.8" />
+      <module name="ribbon" target="1.8" />
       <module name="serviceA" target="1.8" />
       <module name="serviceB" target="1.5" />
       <module name="serviceB (1) (com.example)" target="1.8" />
@@ -31,7 +32,8 @@
       <module name="serviceB-server" target="1.8" />
       <module name="serviceC" target="1.8" />
       <module name="springcloud-demo" target="1.5" />
-      <module name="test" target="1.8" />
+      <module name="test" target="1.5" />
+      <module name="test01" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -40,12 +42,14 @@
       <module name="eureka-server" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="hystrix" options="-parameters" />
+      <module name="ribbon" options="-parameters" />
       <module name="serviceA" options="-parameters" />
       <module name="serviceB (1) (com.example)" options="-parameters" />
       <module name="serviceB-api" options="-parameters" />
+      <module name="serviceB-common" options="" />
       <module name="serviceB-server" options="-parameters" />
       <module name="serviceC" options="-parameters" />
-      <module name="test" options="-parameters" />
+      <module name="test01" options="-parameters" />
     </option>
   </component>
 </project>

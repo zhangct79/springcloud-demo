@@ -1,0 +1,8 @@
+#  http://localhost:9999/hystrix
+
+server:
+  port: 9999
+
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "localhost"
