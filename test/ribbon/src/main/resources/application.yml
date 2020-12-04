@@ -1,26 +1,26 @@
 server:
   port: 8080
 
-serviceA:
-  # 服务实例列表
-  listOfServers: http://localhost:7000,http://localhost:7001,http://localhost:7002
-  # 这个负载均衡器不做重试
-  MaxAutoRetriesNextServer: 0
-  MaxAutoRetries: 0
-  ribbon:
-    # 负载策略
-    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
-    # 设置它的服务实例信息来自配置文件, 如果不设置NIWSServerListClassName就会去euereka里面找
-    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
-
-serviceB:
-  # 服务实例列表
-  listOfServers: http://localhost:7000,http://localhost:7001,http://localhost:7002
-  # 这个负载均衡器不做重试
-  MaxAutoRetriesNextServer: 0
-  MaxAutoRetries: 0
-  ribbon:
-    # 负载策略
-    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
-    # 设置它的服务实例信息来自配置文件, 如果不设置NIWSServerListClassName就会去euereka里面找
-    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+#serviceA:
+#  # 服务实例列表
+#  listOfServers: http://localhost:7000,http://localhost:7001,http://localhost:7002
+#  # 这个负载均衡器不做重试
+#  MaxAutoRetriesNextServer: 0
+#  MaxAutoRetries: 0
+#  ribbon:
+#    # 负载策略
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
+#    # 设置它的服务实例信息来自配置文件, 如果不设置NIWSServerListClassName就会去euereka里面找
+#    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+#
+#serviceB:
+#  # 服务实例列表
+#  listOfServers: http://localhost:7000,http://localhost:7001,http://localhost:7002
+#  # 这个负载均衡器不做重试
+#  MaxAutoRetriesNextServer: 0
+#  MaxAutoRetries: 0
+#  ribbon:
+#    # 负载策略
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+#    # 设置它的服务实例信息来自配置文件, 如果不设置NIWSServerListClassName就会去euereka里面找
+#    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList

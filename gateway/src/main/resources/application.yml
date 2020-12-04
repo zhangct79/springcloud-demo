@@ -1,5 +1,5 @@
 server:
-  port: 8000
+  port: 8888
 
 #serviceA:
 #  # 服务实例列表
@@ -12,7 +12,7 @@ server:
 #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
 #    # 设置它的服务实例信息来自配置文件, 如果不设置NIWSServerListClassName就会去euereka里面找
 #    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
-
+#
 #serviceC:
 #  # 服务实例列表
 #  listOfServers: http://localhost:9000,http://localhost:9001
@@ -25,33 +25,33 @@ server:
 #    # 设置它的服务实例信息来自配置文件, 如果不设置NIWSServerListClassName就会去euereka里面找
 #    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
 
-#hystrix:
-#  command:
-#    default:
-#      execution:
-#        isolation:
-#          thread:
-#            timeoutInMilliseconds: 30000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000
 
 spring:
   application:
     name: gateway
   cloud:
     gateway:
-#      default-filters:
-#        - name: Hystrix
-#          args:
-#            name: globalcmd
-#            fallbackUri: forward:/fallback
-#        - name: Retry
-#          args:
-#            retries: 3
-#            statuses:
-#              - BAD_GATEWAY
-#        - name: Hystrix
-#          args:
-#            name: retrycmd
-#            fallbackUri: forward:/retryFallback
+      default-filters:
+        - name: Hystrix
+          args:
+            name: globalcmd
+            fallbackUri: forward:/fallback
+        - name: Retry
+          args:
+            retries: 3
+            statuses:
+              - BAD_GATEWAY
+        - name: Hystrix
+          args:
+            name: retrycmd
+            fallbackUri: forward:/retryFallback
       routes:
         - id: serviceA
           uri: lb://serviceA
@@ -75,4 +75,4 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/

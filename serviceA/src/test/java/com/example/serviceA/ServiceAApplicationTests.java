@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+//@SpringBootTest
 class ServiceAApplicationTests {
 
 	@Autowired
@@ -14,10 +14,10 @@ class ServiceAApplicationTests {
 
 	@Test
 	void contextLoads() {
-		System.out.println(iServiceBApi.hello());
-
-		PersonModel p1 = iServiceBApi.person();
-		System.out.println(p1);
+//		System.out.println(iServiceBApi.hello());
+//
+//		PersonModel p1 = iServiceBApi.person();
+//		System.out.println(p1);
 	}
 
 }

@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 
-//@RibbonClients(value={@RibbonClient(name="serviceA",configuration = RoundConfiguration.class),
-//        @RibbonClient(name="serviceB",configuration = RandomConfig.class)})
+@RibbonClients(value={@RibbonClient(name="serviceA",configuration = RoundConfiguration.class),
+        @RibbonClient(name="serviceB",configuration = RandomConfig.class)})
 @RestController
 public class RibbonClientController {
     @Autowired
