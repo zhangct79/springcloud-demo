@@ -2,7 +2,7 @@ package com.example.serviceA.controller;
 
 
 import com.example.serviceB.common.PersonModel;
-import com.example.serviceBapi.IServiceBApi;
+import com.example.serviceBapi.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

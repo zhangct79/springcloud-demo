@@ -1,16 +1,16 @@
+server:
+  port: 8888
+
 spring:
   application:
-    name: serviceC
-  # 指定用于获取配置的配置中心服务(应用)名称
+    name: config-center
   cloud:
     config:
-      discovery:
-        enabled: true
-        serviceId: config-center
-      profile: test
-      # 指定分枝版本，默认为master
-      label: master
-
+      server:
+        git:
+          uri: https://github.com/zhangct79/config-cloud.git
+          username: zhangct@siyuanren.com
+          password: 8dao20wei
 eureka:
 #  instance:
 #    #续约发送间隔默认30秒，心跳间隔
