@@ -12,9 +12,12 @@ public class HelloController {
     @Value("${spring.application.name}")
     String applicationName;
 
+    @Value("${person.name}")
+    String personName;
+
     @RequestMapping("hello")
     public String hello() throws InterruptedException {
         Thread.sleep(2000);
-        return applicationName+":"+port;
+        return applicationName+":"+port+":"+personName;
     }
 }

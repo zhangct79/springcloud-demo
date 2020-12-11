@@ -1,7 +1,9 @@
+server:
+  port: ${PORT}
+
 spring:
   application:
-    name: serviceC
-  # 指定用于获取配置的配置中心服务(应用)名称
+    name: serviceA
   cloud:
     config:
       discovery:
@@ -23,4 +25,5 @@ eureka:
 #    healthcheck:
 #      enabled: true
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
+#      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
+      defaultZone: http://localhost:8762/eureka/

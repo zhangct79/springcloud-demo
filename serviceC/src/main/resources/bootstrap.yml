@@ -1,9 +1,21 @@
+person:
+  name: ${PERSON_NAME}
+
 server:
-  port: 7002
+  port: ${PORT}
 
 spring:
   application:
-    name: serviceA
+    name: ServiceC
+  # 指定用于获取配置的配置中心服务(应用)名称
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: config-center
+      profile: test
+      # 指定分枝版本，默认为master
+      label: master
 
 eureka:
 #  instance:
@@ -17,4 +29,5 @@ eureka:
 #    healthcheck:
 #      enabled: true
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
+      defaultZone: http://localhost:8762/eureka/
+#      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
